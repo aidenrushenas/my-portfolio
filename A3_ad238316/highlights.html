@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aspiration</title>
+    <link rel="icon" href="media/IMG_6429.ico" type="image/x-icon">
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        
+        section, aside {
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #005f73;
+            color: white;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #e0e0e0;
+        }
+
+        tr:nth-child(even) {
+            background-color: white;
+        }
+
+        /* Navigation styling */
+        nav.Menu {
+            margin-bottom: 20px;
+        }
+
+        nav.Menu ul {
+            list-style: none;
+            padding-left: 0;
+            text-align: center;
+        }
+
+        nav.Menu li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav.Menu a {
+            color: #005f73;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        
+        footer {
+            width: 100%;
+            text-align: right;
+            padding: 10px 20px;
+            background-color: #005f73;
+            color: white;
+            margin-top: 20px;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            section, aside {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="Menu">
+        <ul>
+            <font size="+2">
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="playingcareer.html">Playing Career</a></li>
+            </font>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <aside>
+            <h4>News Articles about me</h4>
+            <ol>
+                <li><a href="https://hfxwanderersfc.canpl.ca/article/wanderers-sign-canadian-goalkeeper-aiden-rushenas-for-remainder-of-2023" target="_blank">Aiden Rushenas Contract Extension</a></li>
+                <li><a href="https://www.saltwire.com/atlantic-canada/sports/wanderers-sign-dalhousie-product-aiden-rushenas-100879409/" target="_blank">Aiden Rushenas Signing for HFX Wanderers</a></li>
+                <li><a href="https://www.transfermarkt.us/aiden-rushenas/profil/spieler/1041331" target="_blank">Aiden Rushenas Transfermarkt</a></li>
+            </ol>
+        </aside>
+
+        <section>
+            <header>
+                <h1 align="center"><bold>Aiden Rushenas playing Highlights<bold></h1>
+            </header>
+
+            <h4>Dalhousie University Game Footage</h4>
+            <!-- reference: https://www.youtube.com/embed/-OE0kyMTAns -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-OE0kyMTAns" frameborder="0" allowfullscreen></iframe>
+
+            <h4>Interview for Dalhousie University</h4>
+            <video width="640" height="360" controls>
+                <source src="media/Interview with Dal Tiger's Star Keeper _ Behind the Magic on Field _ Aiden Rushenas.mp4" type="video/mp4">
+            </video>
+        </section>
+
+        <section>
+            <h3>Aiden Rushenas Dalhousie University Statistics</h3>
+            
+            <table border="1">
+                <tr>
+                    <th>Season</th>
+                    <th>Games Played</th>
+                    <th>Games Started</th>
+                    <th>Minutes</th>
+                    <th>Goals Against</th>
+                    <th>Goals Against Average</th>
+                    <th>Saves</th>
+                    <th>Save %</th>
+                    <th>WINS</th>
+                    <th>LOSSES</th>
+                    <th>TIES</th>
+                    <th>CLEAN SHEETS</th>
+                </tr>
+                <tr>
+                    <td>2021-22</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>1080:00</td>
+                    <td>17</td>
+                    <td>1.42</td>
+                    <td>81</td>
+                    <td>.827</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>3</td>
+                    <td>4/0</td>
+                </tr>
+                <tr>
+                    <td>2022-23</td>
+                    <td>11</td>
+                    <td>11</td>
+                    <td>945:00</td>
+                    <td>14</td>
+                    <td>1.33</td>
+                    <td>48</td>
+                    <td>.774</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>4/0</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>23</td>
+                    <td>21</td>
+                    <td>2025:00</td>
+                    <td>31</td>
+                    <td>1.38</td>
+                    <td>129</td>
+                    <td>.806</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>7</td>
+                    <td>8/0</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <footer align="right">
+        <address>
+            Contact: <a href="mailto:ad238316@dal.ca">ad238316@dal.ca</a>
+        </address>
+    </footer>
+</body>
+</html>

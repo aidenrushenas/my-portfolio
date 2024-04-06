@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Accessibility: allows to render to users device screen size -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aiden Rushenas</title>
+    <link rel="icon" href="media/IMG_6429.ico" type="image/x-icon">
+   
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif; /* Use a web-safe font */
+        }
+
+        
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        
+        header {
+            background-color: #005f73;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        
+        nav.Menu {
+            background-color: #0a9396;
+            padding: 10px;
+        }
+
+        nav.Menu ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        nav.Menu ul li {
+            display: inline;
+        }
+
+        nav.Menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 0 10px;
+            padding: 5px 10px;
+        }
+
+        nav.Menu a:hover {
+            background-color: #94d2bd;
+            border-radius: 5px;
+        }
+
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        
+        main {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        
+        footer {
+            background-color: #005f73;
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        h1, h2, h3 {
+            font-family: Arial, sans-serif;
+        }
+
+        nav.Menu > ul > li {
+            margin: 5px;
+        }
+
+        h2 ~ section {
+            background-color: #f0f0f0;
+        }
+
+        h1 + p {
+            font-size: 18px;
+        }
+
+        img[alt*='Aiden'] {
+            border: 2px solid #005f73;
+        }
+
+        p::first-line {
+            font-weight: bold;
+            color: #333;
+        }
+        /* Default color scheme */
+        .default-scheme {
+            background-color: #f4f4f4; /* Light Grey */
+            color: #333; /* Dark Text */
+            /* Other element styles */
+        }
+
+        /* Color Scheme 1 */
+        .scheme1 {
+            background-color: #e0f7fa; /* Light Blue */
+            color: #006064; /* Dark Blue Text */
+            /* Other element styles */
+        }
+
+        /* Color Scheme 2 */
+        .scheme2 {
+            background-color: #fff3e0; /* Light Orange */
+            color: #e65100; /* Dark Orange Text */
+            /* Other element styles */
+        }
+
+        /* Color Scheme 3 */
+        .scheme3 {
+            background-color: #f9fbe7; /* Light Green */
+            color: #1b5e20; /* Dark Green Text */
+            /* Other element styles */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Aiden Rushenas</h1>
+        <button onclick="changeColorScheme('default-scheme')">Default Scheme</button>
+<button onclick="changeColorScheme('scheme1')">Color Scheme 1</button>
+<button onclick="changeColorScheme('scheme2')">Color Scheme 2</button>
+<button onclick="changeColorScheme('scheme3')">Color Scheme 3</button>
+
+    </header>
+    
+    <div class="grid-container">
+        <nav class="Menu grid-item">
+            <ul>
+                <li><a href="playingcareer.html">Playing Career</a></li>
+                <li><a href="highlights.html">Highlights</a></li>
+            </ul>
+        </nav>
+
+        <main class="grid-item">
+            <img src="media/IMG_0622.JPG" alt="Aiden Rushenas post match photo" style="width: 100%; height: auto;">
+        
+        <section>
+            <h2> Feedback Form</h2>
+            <form id="myForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required><br>
+            
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="18" required><br>
+            
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select...</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                    <option value="other">Other</option>
+                </select><br>
+            
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback" required></textarea><br>
+            
+                <button type="submit">Submit</button>
+            </form>
+            
+
+        </section>
+        
+        </main>
+        <section>
+            <button onclick="showExtraContent()">Show More</button>
+            <div id="extraContent" style="display:none;">
+                
+                <p>More details about Rushenas playing career select Playing Career, or Highlights</p>
+                
+            </div>
+        </section>
+    
+    
+    </div>
+    
+        <button onclick="toggleAudioPlayer()">Toggle Audio Player</button>
+    
+    <aside>
+        <audio controls>
+            <!--reference: https://www.youtube.com/watch?v=iDyWWtY-Xaw&t=1s-->
+            <source src="media/a classical mix for a prince building his empire.mp3" type="audio/mp3">
+        </audio>
+    </aside>
+    
+    
+    <footer>
+        <address>
+            <a href="mailto:ad238316@dal.ca">ad238316@dal.ca</a> 
+        </address>
+    </footer>
+    <script>
+        window.onload = () => {
+            alert('Welcome to Aiden Rushenas personal football career website!');
+        };
+    
+        const toggleAudioPlayer = () => {
+            const audioPlayer = document.querySelector('aside');
+            audioPlayer.style.display = audioPlayer.style.display === 'none' ? 'block' : 'none';
+        };
+    
+        const showExtraContent = () => {
+            const content = document.getElementById('extraContent');
+            content.style.display = content.style.display === 'none' ? 'block' : 'none';
+        };
+    
+        const changeColorScheme = (scheme) => {
+            document.body.className = '';
+            document.body.classList.add(scheme);
+        };
+                document.getElementById('myForm').onsubmit = function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            if (name === '') {
+                alert('Please enter your name.');
+                return;
+            }
+
+            const email = document.getElementById('email').value;
+            const emailPattern = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            const age = document.getElementById('age').value;
+            if (age < 18) {
+                alert('You must be at least 18 years old.');
+                return;
+            }
+
+            const gender = document.getElementById('gender').value;
+            if (gender === '') {
+                alert('Please select your gender.');
+                return;
+            }
+
+            const feedback = document.getElementById('feedback').value;
+            if (feedback === '') {
+                alert('Please provide your feedback.');
+                return;
+            }
+
+            this.submit(); 
+        };
+
+    </script>
+    
+        
+</body>
+</html>
